@@ -10,6 +10,7 @@ var data = [
     "website": "https://ofa.fas.harvard.edu/ceramics-studio",
     "tools": "pottery wheels, kilns",
     "who": "class students (including public)"
+    "tags": "exists"
   },
   {
     "number": 2,
@@ -113,11 +114,13 @@ var data = [
 ]
 
 
+var makerMap;
+var markers = [];
 
 
 function initMap() {
 
-  var makerMap = new google.maps.Map(document.getElementById('map'), {
+  makerMap = new google.maps.Map(document.getElementById('map'), {
     zoom: 15.5,
     center: {
       lat: 42.3716,
@@ -144,6 +147,10 @@ function initMap() {
       map: makerMap,
       title: data[i].space,
       label: data[i].number.toString(),
+      tags: data[i].tags
     });
+    markers.push(marker);
   };
 }
+
+console.log(oddMarkers);
