@@ -152,9 +152,9 @@ function initMap() {
     markers.push(marker);
   };
 
-  if (markers[i].tags=='exists') {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  };
+  // if (markers[i].tags=='exists') {
+  //   marker.setAnimation(google.maps.Animation.BOUNCE);
+  // };
 
   console.log(markers);
 
