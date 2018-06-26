@@ -156,6 +156,6 @@ function initMap() {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   };
 
-  console.log(JSON.stringify(markers, null, 4));
+  console.log(markers);
 
 }
