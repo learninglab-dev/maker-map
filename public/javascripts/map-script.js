@@ -146,12 +146,12 @@ function initMap() {
       title: data[i].space,
       label: data[i].number.toString(),
       tags: data[i].tags,
-      animation: google.maps.Animation.BOUNCE
+      animation: null
     });
     markers.push(marker);
 
-    if (data[i].number==2) {
-      marker.setAnimation(null)
+    if (data[i].number==0) {
+      marker.setAnimation(google.maps.Animation.BOUNCE)
     }
   };
 
