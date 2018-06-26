@@ -177,6 +177,7 @@ function filterMarkers() {
 
 function showMarkers() {
   for (var i = 0; i < markers.length; i++) {
+    console.log(markers);
     markers[i].setMap(makerMap);
   }
 }
