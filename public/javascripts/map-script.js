@@ -158,10 +158,10 @@ function initMap() {
   };
 
 
-  function filterMarkers(category) {
+  function filterMarkers() {
       for (i = 0; i < markers.length; i++) {
           marker = markers[i];
-          if (marker.tags == category) {
+          if (marker.tags == 'exists') {
               marker.setVisible(true);
           }
           else {
