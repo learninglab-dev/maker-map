@@ -153,7 +153,7 @@ function initMap() {
     markers.push(marker);
 
     if (data[i].number==2) {
-      maker.setAnimation(null)
+      marker.setAnimation(null)
     }
   };
 
