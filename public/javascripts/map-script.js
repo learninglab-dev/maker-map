@@ -157,17 +157,37 @@ function initMap() {
     }
   };
 
-  function setMapOnAll(map) {
-          // for (var i = 0; i < markers.length; i++) {
-            markers[2].setAnimation(google.maps.Animation.DROP);
-          // }
-        }
 
-  function clearMarkers() {
-          setMapOnAll(null);
-        }
+  function filterMarkers(category) {
+      for (i = 0; i < markers.length; i++) {
+          marker = markers[i];
+          // If is same category or category not picked
+          if (marker.tags == category) {
+              marker.setVisible(true);
+          }
+          // Categories don't match
+          else {
+              marker.setVisible(false);
+          }
+      }
+  }
 
-  console.log(markers);
+  filterMarkers('exists');
 
-clearMarkers(makerMap);
+
+
+
+//   function setMapOnAll(map) {
+//           // for (var i = 0; i < markers.length; i++) {
+//             markers[2].setAnimation(google.maps.Animation.DROP);
+//           // }
+//         }
+//
+//   function clearMarkers() {
+//           setMapOnAll(null);
+//         }
+//
+//   console.log(markers);
+//
+// clearMarkers(makerMap);
 }
