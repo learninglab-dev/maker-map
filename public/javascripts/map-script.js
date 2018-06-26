@@ -160,14 +160,14 @@ function initMap() {
 
   function filterMarkers(category) {
       for (i = 0; i < markers.length; i++) {
-          marker = markers[i];
+          // marker = markers[i];
           // If is same category or category not picked
-          if (marker.tags == category) {
-              marker.setVisible(true);
+          if (marker[i].tags == category) {
+              marker[i].setVisible(true);
           }
           // Categories don't match
           else {
-              marker.setVisible(false);
+              marker[i].setVisible(false);
           }
       }
   }
