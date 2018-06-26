@@ -150,7 +150,7 @@ function initMap() {
     });
     markers.push(marker);
 
-    if (data[i].number==0) {
+    if (data[i].number==1) {
       marker.setAnimation(google.maps.Animation.BOUNCE)
     }
   };
