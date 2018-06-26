@@ -152,6 +152,10 @@ function initMap() {
     markers.push(marker);
   };
 
-  console.log(markers);
+  if (markers[i.tags=='exists'){
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  };
+
+  console.log(JSON.stringify(markers, null, 4);
 
 }
