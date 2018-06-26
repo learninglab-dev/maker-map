@@ -151,6 +151,10 @@ function initMap() {
       animation: google.maps.Animation.BOUNCE
     });
     markers.push(marker);
+
+    if (data[i].number==2) {
+      maker.setAnimation(null)
+    }
   };
 
 
