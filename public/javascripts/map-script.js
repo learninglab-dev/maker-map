@@ -147,12 +147,11 @@ function initMap() {
       map: makerMap,
       title: data[i].space,
       label: data[i].number.toString(),
-      tags: data[i].tags
+      tags: data[i].tags,
+      animation: google.maps.Animation.BOUNCE
     });
     markers.push(marker);
   };
-
-    marker[4].setAnimation(google.maps.Animation.BOUNCE);
 
 
   console.log(markers);
