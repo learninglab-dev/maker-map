@@ -157,7 +157,17 @@ function initMap() {
     }
   };
 
+  function setMapOnAll(map) {
+          for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+          }
+        }
+
+  function clearMarkers() {
+          setMapOnAll(null);
+        }
 
   console.log(markers);
 
+clearMarkers(makerMap);
 }
