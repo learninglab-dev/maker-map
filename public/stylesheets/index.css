@@ -1,0 +1,33 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+html {
+  height: 100%;
+}
+
+#map {
+  float: right;
+  height: 100%;
+  width: 75%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: #FFFFFF;
+}
+
+header {
+  background-color: #8B0000;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.info {
+    width: 23%;
+    float: left;
+    margin-left: 15px;
+}

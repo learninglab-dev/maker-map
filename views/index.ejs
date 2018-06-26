@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href='/stylesheets/index.css' />
+  </head>
+
+  <header>
+    <h1 class=white> Maker Map </h1>
+  </header>
+
+  <body>
+
+    <div class="info">
+    <h2> 1. Ceramics Studio </h2>
+    <img src='https://static.hwpi.harvard.edu/files/styles/media_gallery_large/public/ofa/files/main_studio_view_from_mezz_photo_by_james_leynse.jpg'>
+
+    <table>
+      <tr>
+        <td>HARVARD AFFILIATION:</td>
+        <td>Office of the Arts</td>
+      </tr>
+      <tr>
+        <td>ADDRESS:</td>
+        <td>224 Western Ave</td>
+      </tr>
+      <tr>
+        <td>CONTACT:</td>
+        <td>617.495.8680</td>
+      </tr>
+      <tr>
+        <td>EMAIL:</td>
+        <td>ceramics@fas.harvard.edu</td>
+      </tr>
+      <tr>
+        <td>WEBSITE:</td>
+        <td><a href='https://ofa.fas.harvard.edu/ceramics-studio'>https://ofa.fas.harvard.edu/ceramics-studio</a></td>
+      </tr>
+      <tr>
+        <td>ACCESS:</td>
+        <td>must be enrolled in ceramics class</td>
+      </tr>
+      <tr>
+        <td>TERM HOURS:</td>
+        <td>see website for class times</td>
+      </tr>
+    </table>
+
+    <p>The 15,856-square-foot studio has 35 electric wheels, slab roller, potable wagon wheel extruder and a large main studio for hand building, wheel throwing, symposia, seminars, workshops and community events as well as separate wheel throwing, hand building, sculpture and figurative rooms. A multi purpose classroom for visual presentations, lectures, workshops, and digital resource room provides a quiet place to work.  Clay and glaze chemistry labs, plaster and mold-making design areas, and a large new state of the art kiln room will feature 2 new Master Kiln Builder custom gas kilns, 1 new Bailey car kiln for reduction and soda firing, and outdoor access to raku/saggar firing options, large Fredrickson front loading electric car kiln and 7 other electric kilns of varying sizes. There are 27 independent and resident artist spaces, administrative offices, a student lounge, and a research collection of work made by visiting artists.</p>
+    <p>There is a street-front gallery called Galley 224 for exhibition and sale of artworks.</p>
+
+
+    </div>
+
+    <div id="map">
+    </div>
+
+
+
+    <script src='/javascripts/map-script.js'>
+    </script>
+    <script async defer src='https://maps.googleapis.com/maps/api/js?key=<%=apiKey%>&callback=initMap'>
+    </script>
+    </script>
+
+  </body>
+
+</html>
