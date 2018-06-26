@@ -180,12 +180,3 @@ function showMarkers() {
     markers[i].setVisible(true);
   }
 }
-
-// function showMarkers() {
-//   console.log(markers);
-//
-//   for (var i = 0; i < markers.length; i++) {
-//     marker = markers[i];
-//     marker.setVisible(true);
-//   }
-// }
