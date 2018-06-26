@@ -158,25 +158,25 @@ function initMap() {
   };
 
 
-  function filterMarkers() {
-      for (i = 0; i < markers.length; i++) {
-          marker = markers[i];
-          if (marker.tags == 'exists') {
-              marker.setVisible(true);
-          }
-          else {
-              marker.setVisible(false);
-          }
-      }
-  }
-
-
-  function showMarkers() {
-    setMapOnAll(makerMap);
-  }
-
-
 
   console.log(markers);
 
+}
+
+
+function filterMarkers() {
+    for (i = 0; i < markers.length; i++) {
+        marker = markers[i];
+        if (marker.tags == 'exists') {
+            marker.setVisible(true);
+        }
+        else {
+            marker.setVisible(false);
+        }
+    }
+}
+
+
+function showMarkers() {
+  setMapOnAll(makerMap);
 }
