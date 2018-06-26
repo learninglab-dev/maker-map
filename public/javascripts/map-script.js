@@ -9,7 +9,7 @@ var data = [
     "hours": "Monday-Friday 9 AM-5 PM",
     "website": "https://ofa.fas.harvard.edu/ceramics-studio",
     "tools": "pottery wheels, kilns",
-    "who": "class students (including public)"
+    "who": "class students (including public)",
     "tags": "exists"
   },
   {
