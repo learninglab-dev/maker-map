@@ -114,13 +114,13 @@ var data = [
 ]
 
 
-var makerMap;
-var markers = [];
-
 
 function initMap() {
 
-  makerMap = new google.maps.Map(document.getElementById('map'), {
+  var markers = [];
+
+
+  var makerMap = new google.maps.Map(document.getElementById('map'), {
     zoom: 15.5,
     center: {
       lat: 42.3716,
@@ -151,6 +151,7 @@ function initMap() {
     });
     markers.push(marker);
   };
-}
 
-console.log(oddMarkers);
+  console.log(markers);
+
+}
