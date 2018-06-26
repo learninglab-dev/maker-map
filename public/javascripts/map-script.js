@@ -170,22 +170,13 @@ function initMap() {
       }
   }
 
-  filterMarkers('exists');
+
+  function showMarkers() {
+    setMapOnAll(makerMap);
+  }
 
 
 
+  console.log(markers);
 
-//   function setMapOnAll(map) {
-//           // for (var i = 0; i < markers.length; i++) {
-//             markers[2].setAnimation(google.maps.Animation.DROP);
-//           // }
-//         }
-//
-//   function clearMarkers() {
-//           setMapOnAll(null);
-//         }
-//
-//   console.log(markers);
-//
-// clearMarkers(makerMap);
 }
