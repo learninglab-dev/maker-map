@@ -158,9 +158,9 @@ function initMap() {
   };
 
   function setMapOnAll(map) {
-          for (var i = 0; i < markers.length; i++) {
-            markers[i].setAnimation(google.maps.Animation.DROP);
-          }
+          // for (var i = 0; i < markers.length; i++) {
+            markers[2].setAnimation(google.maps.Animation.DROP);
+          // }
         }
 
   function clearMarkers() {
