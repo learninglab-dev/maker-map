@@ -159,7 +159,7 @@ function initMap() {
 
   function setMapOnAll(map) {
           for (var i = 0; i < markers.length; i++) {
-            markers[i].setAnimation(null);
+            markers[i].setAnimation(google.maps.Animation.DROP);
           }
         }
 
