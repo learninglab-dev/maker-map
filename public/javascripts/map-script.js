@@ -135,6 +135,7 @@ var data = [
 
 var makerMap;
 var markers = [];
+var infoWindow;
 
 function initMap() {
 
@@ -158,6 +159,7 @@ function initMap() {
 
 
   for (var i = 0; i < data.length; i++) {
+
     var marker = new google.maps.Marker({
       position: {
         lat: data[i].lat,
@@ -167,13 +169,14 @@ function initMap() {
       title: data[i].space,
       label: data[i].number.toString(),
       tags: data[i].tags,
-      animation: null
+      animation: null,
+      anchorPoint: null
     });
 
     if (i==0) {
       // marker.setAnimation(google.maps.Animation.BOUNCE)
 
-      var infowindow = new google.maps.InfoWindow({
+      infowindow = new google.maps.InfoWindow({
             content: data[i].content,
             maxWidth: 200,
             position: {
