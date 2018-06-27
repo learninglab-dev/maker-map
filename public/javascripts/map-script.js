@@ -187,7 +187,7 @@ function initMap() {
       infoWindow.setPosition({lat: data[i].lat, lng: data[i].lng});
 
       marker.addListener('click', function() {
-           infowindow.open(makerMap, marker);
+           infoWindow.open(makerMap, marker);
          });
     }
 
