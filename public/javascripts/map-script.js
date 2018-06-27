@@ -154,16 +154,17 @@ function initMap() {
     });
 
     var content = data[i].content;
-    var infowindow = new google.maps.InfoWindow();
+    var infoWindow = new google.maps.InfoWindow();
 
-    google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+    google.maps.event.addListener(marker,'click', (function(marker,content,infoWindow){
     return function() {
-        infowindow.setContent(content);
-        infowindow.open(makerMap,marker);
+        infoWindow.setContent(content);
+        infoWindow.open(makerMap,marker);
     };
-})(marker,content,infowindow));
+})(marker,content,infoWindow));
 
        markers.push(marker);
+       infowWindows.push(infoWindow)
 
   };
 
@@ -175,13 +176,16 @@ function initMap() {
 
 function filterMarkers() {
     for (i = 0; i < markers.length; i++) {
+
         marker = markers[i];
+        infoWindow = infowWindows[i];
+        
         if (marker.tags == 'exists') {
             marker.setVisible(true);
         }
         else {
             marker.setVisible(false);
-            infowindow.close(makerMap,marker);
+            infoWindow.close(makerMap,marker);
         }
         // markers[i] = marker;
     }
