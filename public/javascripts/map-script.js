@@ -178,8 +178,8 @@ function initMap() {
     return function() {
         infoWindow.setContent(content);
         infoWindow.open(makerMap,marker);
-    };
-})(marker,content,infoWindow));
+      };
+    })(marker,content,infoWindow));
 
        markers.push(marker);
        infoWindows.push(infoWindow)
