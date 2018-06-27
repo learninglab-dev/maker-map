@@ -117,6 +117,7 @@ var data = [
 
 var makerMap;
 var markers = [];
+var infowWindows = [];
 
 function initMap() {
 
@@ -179,7 +180,7 @@ function filterMarkers() {
 
         marker = markers[i];
         infoWindow = infowWindows[i];
-        
+
         if (marker.tags == 'exists') {
             marker.setVisible(true);
         }
