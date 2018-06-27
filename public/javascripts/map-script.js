@@ -195,7 +195,7 @@ function initMap() {
 function filterMarkers(tag) {
     for (i = 0; i < markers.length; i++) {
 
-        marker = markers[i];
+        var marker = markers[i];
         infoWindow = infowWindows[i];
 
         if (marker.tags == tag) {
