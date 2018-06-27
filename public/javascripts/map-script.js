@@ -134,7 +134,7 @@ var data = [
 
 var makerMap;
 var markers = [];
-var infowWindows = [];
+var infoWindows = [];
 
 function initMap() {
 
@@ -182,7 +182,7 @@ function initMap() {
 })(marker,content,infoWindow));
 
        markers.push(marker);
-       infowWindows.push(infoWindow)
+       infoWindows.push(infoWindow)
 
   };
 
@@ -195,17 +195,16 @@ function initMap() {
 function filterMarkers(tag) {
     for (i = 0; i < markers.length; i++) {
 
-        var marker = markers[i];
-        infoWindow = infowWindows[i];
+        // var marker = markers[i];
+        // infoWindow = infoWindows[i];
 
-        if (marker.tags == tag) {
-            marker.setVisible(true);
+        if (markers[i].tags == tag) {
+            markers[i].setVisible(true);
         }
         else {
-            marker.setVisible(false);
-            infoWindow.close(makerMap,marker);
+            markers[i].setVisible(false);
+            infoWindows[i].close(makerMap,markers[i]);
         }
-        // markers[i] = marker;
     }
 }
 
