@@ -10,9 +10,8 @@ var data = [
     "website": "https://ofa.fas.harvard.edu/ceramics-studio",
     "tools": "pottery wheels, kilns",
     "who": "class students (including public)",
-    "tags": "exists",
-    "content": '<h1 id="firstHeading" class="firstHeading">Ceramics Studio</h1>'
-
+    "tags": "allston",
+    "content": '<h2>Ceramics Studio</h2>'
   },
   {
     "number": 2,
@@ -23,7 +22,9 @@ var data = [
     "hours": "24 hrs w/ swipe access",
     "website": "https://fdo.fas.harvard.edu/files/fdo/files/holworthy_art_room_guidelines_2017-18.pdf",
     "tools": "brushes, pencils, sketchbooks, drawing boards",
-    "who": "freshmen, but must contact correna_cohen@harvard.edu for initial access"
+    "who": "freshmen, but must contact correna_cohen@harvard.edu for initial access",
+    "tags": "yard",
+    "content": '<h2>Freshman Arts room</h2>'
   },
   {
     "number": 3,
@@ -34,7 +35,9 @@ var data = [
     "hours": "Dance Office hours are 9:30am-5:30pm M-F, but access to Dance Center space is available 9:30am-12am",
     "website": "https://ofa.fas.harvard.edu/harvard-dance-center",
     "tools": "2 studios, 1 green room. Mirrors, barres, sprung floor with marley (2 studios), pianos. Dressing rooms, showers, gender neutral restrooms",
-    "who": "Undergraduate students + non-student by request"
+    "who": "Undergraduate students + non-student by request",
+    "tags": "quad",
+    "content": '<h2>Harvard Dance Center</h2>'
   },
   {
     "number": 4,
@@ -45,7 +48,9 @@ var data = [
     "hours": "9am-5pm interim summer; 8am- 11pm academic year",
     "website": "",
     "tools": "access to FXCP on Mac.",
-    "who": "Graduate students (masters & doctoral)"
+    "who": "Graduate students (masters & doctoral)",
+    "tags": "yard",
+    "content": '<h2>LaunchPad</h2>'
   },
   {
     "number": 5,
@@ -56,7 +61,9 @@ var data = [
     "hours": "M-Th 4:30pm-11pm, F: closed, Saturday: 9am-5pm, Sunday: noon-11pm",
     "website": "https://ofa.fas.harvard.edu/harvard-dance-center",
     "tools": "mirrors, sound system, barres, sprung floor with marley, upright piano.",
-    "who": ""
+    "who": "",
+    "tags": "yard",
+    "content": '<h2>Director\'s Studio</h2>'
   },
   {
     "number": 6,
@@ -67,7 +74,9 @@ var data = [
     "hours": "10 am - 11 pm (during the year, alternate hours for summer/holidays)",
     "website": "",
     "tools": "grand pianos, standing pianos, a harpsichord",
-    "who": "anyone with a valid Harvard ID"
+    "who": "anyone with a valid Harvard ID",
+    "tags": "yard",
+    "content": '<h2>Paine Hall</h2>'
   },
   {
     "number": 7,
@@ -78,7 +87,9 @@ var data = [
     "hours": "by appointment or with several sound engineer training sessions",
     "website": "https://soch.fas.harvard.edu/recording-studio",
     "tools": "microphones, mixer, preamp, monitors, headphones",
-    "who": "Harvard undergraduates"
+    "who": "Harvard undergraduates",
+    "tags": "quad",
+    "content": '<h2>Recording Studio</h2>'
   },
   {
     "number": 8,
@@ -89,7 +100,9 @@ var data = [
     "hours": "",
     "website": "https://ofa.fas.harvard.edu/rehearsal-practice-space",
     "tools": "Room 014 (drum kit, upright piano); Room 015 (timpani, marimba); Room 016 (upright piano)",
-    "who": ""
+    "who": "",
+    "tags": "yard",
+    "content": '<h2>Memorial Hall</h2>'
   },
   {
     "number": 9,
@@ -100,19 +113,23 @@ var data = [
     "hours": "M-Th 3pm-12am, Sat 8am-3pm, Sunday 8am-12am",
     "website": "https://sites.fas.harvard.edu/~memhall/lhapplication.html",
     "tools": "stage (wood floor)",
-    "who": "officially recognized FAS student groups"
+    "who": "officially recognized FAS student groups",
+    "tags": "yard",
+    "content": '<h2>Lowell Lecture Hall</h2>'
   },
-  // {
-  //   "number": 10,
-  //   "space": "Harvard Ed Portal",
-  //   "lat": 42.3626,
-  //   "lng": -71.1312,
-  //   "address": "224 Western Ave, Allston, MA 02134",
-  //   "hours": "",
-  //   "website": "https://edportal.harvard.edu/",
-  //   "tools": "studios",
-  //   "who": "Harvard community; some programs restricted to Allston/Brighton residents"
-  // }
+  {
+    "number": 10,
+    "space": "Harvard Ed Portal",
+    "lat": 42.3626,
+    "lng": -71.1312,
+    "address": "224 Western Ave, Allston, MA 02134",
+    "hours": "",
+    "website": "https://edportal.harvard.edu/",
+    "tools": "studios",
+    "who": "Harvard community; some programs restricted to Allston/Brighton residents",
+    "tags": "allston",
+    "content": '<h2>Harvard Ed Portal</h2>'
+  }
 ]
 
 var makerMap;
@@ -175,13 +192,13 @@ function initMap() {
 }
 
 
-function filterMarkers() {
+function filterMarkers(tag) {
     for (i = 0; i < markers.length; i++) {
 
         marker = markers[i];
         infoWindow = infowWindows[i];
 
-        if (marker.tags == 'exists') {
+        if (marker.tags == tag) {
             marker.setVisible(true);
         }
         else {
