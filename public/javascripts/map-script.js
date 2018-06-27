@@ -166,8 +166,6 @@ function initMap() {
               }
           });
 
-      infoWindow.setPosition({lat: data[i].lat, lng: data[i].lng});
-
       marker.addListener('click', function() {
            infoWindow.open(makerMap, marker);
          });
@@ -177,6 +175,7 @@ function initMap() {
 
   };
 
+  infoWindow.setPosition({lat: data[i].lat, lng: data[i].lng});
 
 
   console.log(markers);
