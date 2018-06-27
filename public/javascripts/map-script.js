@@ -175,7 +175,7 @@ function initMap() {
 
   };
 
-  infoWindow.setPosition({lat: data[i].lat, lng: data[i].lng});
+  infoWindow.setPosition({lat: data[0].lat, lng: data[0].lng});
 
 
   console.log(markers);
