@@ -179,6 +179,7 @@ function initMap() {
 
 
   console.log(markers);
+  console.log(infoWindow);
 
 }
 
