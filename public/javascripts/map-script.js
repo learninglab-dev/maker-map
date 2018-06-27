@@ -170,7 +170,7 @@ function initMap() {
       label: data[i].number.toString(),
       tags: data[i].tags,
       animation: null,
-      anchorPoint: null
+      anchor: null
     });
 
     if (i==0) {
