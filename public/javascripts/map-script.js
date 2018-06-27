@@ -30,7 +30,7 @@ var data = [
             'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
             '(last visited June 22, 2009).</p>'+
             '</div>'+
-            '</div>';
+            '</div>'
   },
   {
     "number": 2,
