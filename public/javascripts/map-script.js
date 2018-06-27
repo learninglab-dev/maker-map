@@ -117,7 +117,6 @@ var data = [
 
 var makerMap;
 var markers = [];
-var infoWindow;
 
 function initMap() {
 
@@ -154,32 +153,22 @@ function initMap() {
       animation: null,
     });
 
-    if (i==0) {
-      // marker.setAnimation(google.maps.Animation.BOUNCE)
 
-      infoWindow = new google.maps.InfoWindow({
-            content: data[i].content,
-            maxWidth: 200,
-            position: {
-              lat: data[i].lat,
-              lng: data[i].lng
-              }
-          });
+    var infowindow = new google.maps.InfoWindow();
+    google.maps.event.addListener(marker, 'click', (function(marker) {
+         return function() {
+             var content = data[i].content;
+             infowindow.setContent(content);
+             infowindow.open(makerMap, marker);
+         }
+       })(marker));
 
-      marker.addListener('click', function() {
-           infoWindow.open(makerMap, marker);
-         });
-    }
-
-    markers.push(marker);
+       markers.push(marker);
 
   };
 
-  infoWindow.setPosition({lat: data[0].lat, lng: data[0].lng});
-
 
   console.log(markers);
-  console.log(infoWindow);
 
 }
 
