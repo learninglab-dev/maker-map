@@ -170,19 +170,20 @@ function initMap() {
       animation: null
     });
 
-    var infowindow = new google.maps.InfoWindow({
-          content: data[i].content
-        });
+    if (i==0) {
+      // marker.setAnimation(google.maps.Animation.BOUNCE)
 
-    marker.addListener('click', function() {
-         infowindow.open(makerMap, marker);
-       });
+      var infowindow = new google.maps.InfoWindow({
+            content: data[i].content
+          });
+
+      marker.addListener('click', function() {
+           infowindow.open(makerMap, marker);
+         });
+    }
 
     markers.push(marker);
 
-    if (data[i].number==1) {
-      marker.setAnimation(google.maps.Animation.BOUNCE)
-    }
   };
 
 
