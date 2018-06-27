@@ -170,13 +170,12 @@ function initMap() {
       label: data[i].number.toString(),
       tags: data[i].tags,
       animation: null,
-      anchor: null
     });
 
     if (i==0) {
       // marker.setAnimation(google.maps.Animation.BOUNCE)
 
-      infowindow = new google.maps.InfoWindow({
+      infoWindow = new google.maps.InfoWindow({
             content: data[i].content,
             maxWidth: 200,
             position: {
@@ -184,6 +183,8 @@ function initMap() {
               lng: data[i].lng
               }
           });
+
+      infoWindow.setPosition({lat: data[i].lat, lng: data[i].lng});
 
       marker.addListener('click', function() {
            infowindow.open(makerMap, marker);
