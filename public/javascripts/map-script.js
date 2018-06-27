@@ -140,7 +140,7 @@ function initMap() {
   // };
 
 
-  for (var i = 0; i < data.length; i++) {
+  for (var i = 0; i < 1; i++) {
 
     var marker = new google.maps.Marker({
       position: {
