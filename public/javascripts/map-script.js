@@ -14,7 +14,7 @@ var data = [
     "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Ceramics Studio</h1>'+
             '<div id="bodyContent">'+
             '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
             'sandstone rock formation in the southern part of the '+
@@ -174,7 +174,12 @@ function initMap() {
       // marker.setAnimation(google.maps.Animation.BOUNCE)
 
       var infowindow = new google.maps.InfoWindow({
-            content: data[i].content
+            content: data[i].content,
+            maxWidth: 200,
+            position: {
+              lat: data[i].lat,
+              lng: data[i].lng
+              }
           });
 
       marker.addListener('click', function() {
