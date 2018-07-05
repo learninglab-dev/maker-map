@@ -1,3 +1,4 @@
+
 //note: putting the data in here like this is a patch until I an figure out the issue below. See comment ~117.
 var data = [
   {
@@ -131,6 +132,8 @@ var data = [
     "content": '<h2>Harvard Ed Portal</h2>'
   }
 ]
+
+
 
 var makerMap;
 var markers = [];
