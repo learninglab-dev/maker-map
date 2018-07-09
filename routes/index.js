@@ -2,18 +2,23 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 require('dotenv').config();
+var Space = require('../public/models/space.js');
 
 
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
 
-  var theJson = fs.readFileSync('./public/javascripts/map-data.json');
-  var data = JSON.parse(theJson);
+  // var theJson = fs.readFileSync('./public/javascripts/map-data.json');
+  // var data = JSON.parse(theJson);
 
   // console.log(JSON.stringify(data, null, 4));
 
-  res.render('index', { title: 'Maker Map', data: data, apiKey: process.env.GOOGLE_MAPS_API_KEY });
+  Space.find({}, function(err, data){
+    var spaces = data;
+    console.log(JSON.stringify(spaces, null, 4));
+
+  res.render('index', { title: 'Maker Map', data: spaces, apiKey: process.env.GOOGLE_MAPS_API_KEY, mLabKey: process.env.MLAB_API_KEY });
+  });
 
 });
 
