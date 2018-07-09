@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
   // console.log(JSON.stringify(data, null, 4));
 
   Space.find({}, function(err, data){
-    var spaces = data;
+    var spaces = JSON.stringify(data);
     console.log(JSON.stringify(spaces, null, 4));
 
   res.render('index', { title: 'Maker Map', data: spaces, apiKey: process.env.GOOGLE_MAPS_API_KEY, mLabKey: process.env.MLAB_API_KEY });

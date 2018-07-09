@@ -2,6 +2,7 @@ var makerMap;
 var markers = [];
 var infoWindows = [];
 
+
 function initMap() {
 
   makerMap = new google.maps.Map(document.getElementById('map'), {
@@ -12,13 +13,7 @@ function initMap() {
       }
     });
 
-   $.ajax({
-       url: 'https://api.mlab.com/api/1/databases/maker-map-dev/collections/spaces?apiKey=[mLabKey]',
-       type : 'GET',
-       dataType: 'json',
-       success : function(data) {makeMarkers(makerMap, data)},
-       error: function() { alert('Failed!'); },
-   });
+    makeMarkers(makerMap, data);
 
 }
 
@@ -31,18 +26,36 @@ function makeMarkers(map, data) {
 
     console.log(data[i]);
 
+if (data[i].name == 'LL') {
 
     var marker = new google.maps.Marker({
       position: {
-        lat: parseFloat(data[i].latitute),
+        lat: parseFloat(data[i].latitude),
         lng: parseFloat(data[i].longitude)
         },
       map: map,
       title: data[i].name,
-      label: (i+1).toString(),
+      label: '',
+      tags: data[i].tags[0],
+      animation: google.maps.Animation.DROP,
+      icon: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png'
+    });
+
+  }
+else {
+    var marker = new google.maps.Marker({
+      position: {
+        lat: parseFloat(data[i].latitude),
+        lng: parseFloat(data[i].longitude)
+        },
+      map: map,
+      title: data[i].name,
+      label: (i).toString(),
       tags: data[i].tags[0],
       animation: null,
     });
+
+  }
 
     var content = data[i].name;
     var infoWindow = new google.maps.InfoWindow();
