@@ -6,7 +6,7 @@ var infoWindows = [];
 function initMap() {
 
   makerMap = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15.5,
+    zoom: 15,
     center: {
       lat: 42.3716,
       lng: -71.1240

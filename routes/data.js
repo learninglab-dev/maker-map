@@ -43,7 +43,7 @@ router.post('/send', function(req, res) {
         var newSpace = new Space({
           name: req.body.space,
           address: req.body.address,
-          latitute: geocode.lat,
+          latitude: geocode.lat,
           longitude: geocode.lng,
           hours: req.body.hours,
           website: req.body.website,
