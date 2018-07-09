@@ -52,6 +52,7 @@
     <p>There is a street-front gallery called Galley 224 for exhibition and sale of artworks.</p>
 
 
+
     </div>
 
     <div id="floating-panel">
@@ -66,8 +67,12 @@
 
 
 
-    <script src='/javascripts/map-script.js'></script>
     <script src='/javascripts/map-data.json'></script>
+    <script src='/javascripts/map-script.js'></script>
+    <script>
+        var data = JSON.parse('<%-data%>');
+        console.log(data);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script async defer src='https://maps.googleapis.com/maps/api/js?key=<%=apiKey%>&callback=initMap'></script>
 

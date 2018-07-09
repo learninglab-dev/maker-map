@@ -41,13 +41,13 @@ router.post('/send', function(req, res) {
       console.log('here is geocode: ' + JSON.stringify(geocode, null, 4));
 
         var newSpace = new Space({
-          name: req.body.name,
+          name: req.body.space,
           address: req.body.address,
           latitute: geocode.lat,
           longitude: geocode.lng,
           hours: req.body.hours,
           website: req.body.website,
-          tags: [0, 1]
+          tags: req.body.tags
         });
 
         console.log(JSON.stringify(newSpace, null, 4));
